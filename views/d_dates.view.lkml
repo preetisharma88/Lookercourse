@@ -2,6 +2,14 @@ view: d_dates {
   sql_table_name: "DATA_MART"."D_DATES"
     ;;
 
+  dimension: datekey {
+    label: "Date Key"
+    primary_key: yes
+    hidden: yes
+    type: number
+    sql: ${TABLE}."DATEKEY" ;;
+  }
+
   dimension_group: date_val {
     type: time
     timeframes: [
@@ -17,14 +25,14 @@ view: d_dates {
     sql: ${TABLE}."DATE_VAL" ;;
   }
 
-  dimension: datekey {
-    type: number
-    sql: ${TABLE}."DATEKEY" ;;
-  }
-
   dimension: day_of_week {
     type: number
     sql: ${TABLE}."DAY_OF_WEEK" ;;
+  }
+  dimension: year_month {
+    hidden: yes
+    type: number
+    sql: ${year}+${month_num};;
   }
 
   dimension: dayname_of_week {
