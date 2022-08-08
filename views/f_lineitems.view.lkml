@@ -189,6 +189,7 @@ view: f_lineitems {
   }
   dimension: is_returned {
     type: yesno
+    hidden:  yes
     sql: ${l_returnflag}='R' ;;
   }
   measure: Items_Returned {

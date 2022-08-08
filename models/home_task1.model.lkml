@@ -10,14 +10,6 @@ datagroup: home_task1_default_datagroup {
 
 persist_with: home_task1_default_datagroup
 
-explore: d_customer {}
-
-explore: d_dates {}
-
-explore: d_part {}
-
-explore: d_supplier {}
-
 explore: f_lineitems {
   label: "Order Analysis"
   view_label: "Ordereditems"
