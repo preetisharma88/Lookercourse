@@ -46,6 +46,17 @@ view: d_supplier {
     sql: ${s_acctbal} ;;
   }
 
+  dimension:Supplier_Links  {
+    label: "Google Links of suppliers"
+    description: "Google links which lead to supplier webpage"
+    type: string
+    sql: ${TABLE}."S_NAME" ;;
+    link: {
+      label: "Google Link"
+      url: "http://www.google.com/search?q={{value}}"
+      icon_url: "http://www.google.com/favicon.ico"
+    }
+  }
   measure: count {
     type: count
     drill_fields: [s_name]
