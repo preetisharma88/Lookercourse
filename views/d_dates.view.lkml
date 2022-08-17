@@ -15,6 +15,7 @@ view: d_dates {
     timeframes: [
       raw,
       date,
+      day_of_month,
       week,
       month,
       quarter,
