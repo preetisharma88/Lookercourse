@@ -177,6 +177,7 @@ view: f_lineitems {
     label: "Total Gross Margin Amount"
     description: "Total Gross Margin Amount in USD dollar"
     type: number
+    drill_fields: [d_supplier.s_name,d_supplier.suppliers_tiers,d_supplier.s_nation,d_supplier.s_region]
     sql: ${Gross_Revenue}-${Total_Cost} ;;
     value_format_name: usd_0
   }
